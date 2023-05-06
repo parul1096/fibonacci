@@ -1,0 +1,176 @@
+1. What is Python?
+Python is a high-level, interpreted, interactive, and object-oriented scripting language. It uses English keywords frequently. Whereas, other languages use punctuation, Python has fewer syntactic constructions.
+Python is designed to be highly readable and compatible with different platforms such as Mac, Windows, Linux, Raspberry Pi, etc.
+
+2. Python is an interpreted language. Explain.
+An interpreted language is any programming language that executes its statements line by line. Programs written in Python run directly from the source code, with no intermediary compilation step.
+
+3. What is the difference between lists and tuples?
+Lists	Tuples
+Lists are mutable, i.e., they can be edited	Tuples are immutable (they are lists that cannot be edited)
+Lists are usually slower than tuples	Tuples are faster than lists
+Lists consume a lot of memory	Tuples consume less memory when compared to lists
+Lists are less reliable in terms of errors as unexpected changes are more likely to occur	Tuples are more reliable as it is hard for any unexpected change to occur
+Lists consist of many built-in functions.	Tuples do not consist of any built-in functions.
+     Syntax:   list_1 = [10, ‘Intellipaat’, 20]
+     Syntax:   tup_1 = (10, ‘Intellipaat’ , 20)
+
+4. What is pep 8?
+PEP in Python stands for Python Enhancement Proposal. It is a set of rules that specify how to write and design Python code for maximum readability.
+
+5. What are the Key features of Python?
+The key features of Python are as follows:
+Python is an interpreted language, so it doesn’t need to be compiled before execution, unlike languages such as C.
+Python is dynamically typed, so there is no need to declare a variable with the data type. Python Interpreter will identify the data type on the basis of the value of the variable.
+For example, in Python, the following code line will run without any error:
+    a = 100
+    a = "Intellipaat"
+Python follows an object-oriented programming paradigm with the exception of having access specifiers. Other than access specifiers (public and private keywords), Python has classes, inheritance, and all other usual OOPs concepts.
+Python is a cross-platform language, i.e., a Python program written on a Windows system will also run on a Linux system with little or no modifications at all.
+Python is literally a general-purpose language, i.e., Python finds its way in various domains such as web application development, automation, Data Science, Machine Learning, and more.
+
+6. How is Memory managed in Python?
+Memory in Python is managed by Python private heap space. All Python objects and data structures are located in a private heap. This private heap is taken care of by Python Interpreter itself, and a programmer doesn’t have access to this private heap.
+Python memory manager takes care of the allocation of Python private heap space.
+Memory for Python private heap space is made available by Python’s in-built garbage collector, which recycles and frees up all the unused memory.
+
+7. What is a dictionary in Python?
+Python dictionary is one of the supported data types in Python. It is an unordered collection of elements. The elements in dictionaries are stored as key-value pairs. Dictionaries are indexed by keys.
+For example, below we have a dictionary named ‘dict’. It contains two keys, Country and Capital, along with their corresponding values, India and New Delhi.
+    Syntax:  dict={‘Country’:’India’,’Capital’:’New Delhi’, }
+             Output: Country: India, Capital: New Delhi
+             
+8. What are the common built-in data types in Python?
+Python supports the below-mentioned built-in data types:
+Immutable data types:
+          Number
+          String
+          Tuple
+Mutable data types:
+          List
+          Dictionary
+          set    
+          
+9. What are negative indices?
+Let’s take a list for this.
+   >>> mylist=[0,1,2,3,4,5,6,7,8]
+A negative index, unlike a positive one, begins searching from the right.
+   >>> mylist[-3]
+       6
+This also helps with slicing from the back:
+   >>> mylist[-6:-1]
+       [3, 4, 5, 6, 7]
+
+10. Is Python case-sensitive?
+
+A language is case-sensitive if it distinguishes between identifiers like myname and Myname. In other words, it cares about case- lowercase or uppercase. Let’s try this with Python.
+>>> myname='Ayushi'
+>>> Myname
+Traceback (most recent call last):
+
+     File “<pyshell#3>”, line 1, in <module>
+          Myname
+          NameError: name ‘Myname’ is not defined
+
+As you can see, this raised a NameError. This means that Python is indeed case-sensitive.
+
+11. How would you convert a string into lowercase?
+We use the lower() method for this.
+     >>> 'AyuShi'.lower()
+         ‘ayushi’
+To convert it into uppercase, then, we use upper().
+     >>> 'AyuShi'.upper()
+         ‘AYUSHI’
+Also, to check if a string is in all uppercase or all lowercase, we use the methods isupper() and islower().
+     >>> 'AyuShi'.isupper()
+         False
+     >>> 'AYUSHI'.isupper()
+         True
+     >>> 'ayushi'.islower()
+          True
+     >>> '@yu$hi'.islower()
+          True
+     >>> '@YU$HI'.isupper()
+          True
+So, characters like @ and $ will suffice for both cases
+Also, istitle() will tell us if a string is in title case.
+     >>> 'The Corpse Bride'.istitle()
+          True
+
+12. What is the pass statement in Python?
+
+There may be times in our code when we haven’t decided what to do yet, but we must type something for it to be syntactically correct. In such a case, we use the pass statement.
+      >>> def func(*args):
+          pass
+Similarly, the break statement breaks out of a loop.
+      >>> for i in range(7):
+              if i==3: break
+              print(i)
+                  1
+                  2
+Finally, the continue statement skips to the next iteration.
+     >>> for i in range(7):
+             if i==3: continue
+             print(i)
+                  1
+                  2
+                  4
+                  5
+                  6
+                  
+13.Explain help() and dir() functions in Python.
+The help() function displays the documentation string and help for its argument.
+      >>> import copy
+      >>> help(copy.copy)
+Help on function copy in module copy:
+     copy(x)
+Shallow copy operation on arbitrary Python objects.
+See the module’s __doc__ string for more info.
+The dir() function displays all the members of an object(any kind).
+      >>> dir(copy.copy)
+[‘__annotations__’, ‘__call__’, ‘__class__’, ‘__closure__’, ‘__code__’, ‘__defaults__’, ‘__delattr__’, ‘__dict__’, ‘__dir__’, ‘__doc__’, ‘__eq__’, ‘__format__’, ‘__ge__’, ‘__get__’, ‘__getattribute__’, ‘__globals__’, ‘__gt__’, ‘__hash__’, ‘__init__’, ‘__init_subclass__’, ‘__kwdefaults__’, ‘__le__’, ‘__lt__’, ‘__module__’, ‘__name__’, ‘__ne__’, ‘__new__’, ‘__qualname__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__subclasshook__’]       
+
+14. How will you check if all characters in a string are alphanumeric?
+For this, we use the method isalnum().
+
+15. We know Python is all the rage these days. But to be truly accepting of a great technology, you must know its pitfalls as well. Would you like to talk about this?
+- Python’s interpreted nature imposes a speed penalty on it.
+- While Python is great for a lot of things, it is weak in mobile computing, and in browsers.
+- Being dynamically-typed, Python uses duck-typing (If it looks like a duck, it must be a duck). This can raise runtime errors.
+- Python has underdeveloped database access layers. This renders it a less-than-perfect choice for huge database applications.
+- And then, well, of course. Being easy makes it addictive. Once a Python-coder, always a Python coder.
+
+16.Why do we need break and continue in Python?
+Both break and continue are statements that control flow in Python loops. break stops the current loop from executing further and transfers the control to the next block. continue jumps to the next iteration of the loop without exhausting it.
+
+17. Will the do-while loop work if you don’t end it with a semicolon?
+Trick question! Python does not support an intrinsic do-while loop. Secondly, to terminate do-while loops is a necessity for languages like C++.
+
+18.What is Python good for?
+Python is a jack of many trades, check out Applications of Python to find out more.
+Meanwhile, we’ll say we can use it for:
+ * Web and Internet Development
+ * Desktop GUI
+ * Scientific and Numeric Applications
+ * Software Development Applications
+ * Applications in Education
+ * Applications in Business
+ * Database Access
+ * Network Programming
+ * Games, 3D Graphics
+ * Other Python Applications
+
+19.Now, print this string five times in a row.
+  >>> for i in range(6):
+        print(s)
+        
+I love Python
+I love Python
+I love Python
+I love Python
+I love Python
+I love Python
+
+20.What is a control flow statement?
+A Python program usually starts to execute from the first line. From there, it moves through each statement just once and as soon as it’s done with the last statement, it transactions the program. However, sometimes, we may want to take a more twisted path through the code. Control flow statements let us disturb the normal execution flow of a program and bend it to our will.
+
